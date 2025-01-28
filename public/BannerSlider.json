@@ -1,0 +1,26 @@
+[
+    {
+        "id":"0",
+        "heading" :"Construction Workers Reviewing the Project Map",
+        "image" : "../src/assets/constrction-1.jpg",
+        "description" : "Two dedicated construction workers are seen closely examining a project map. With focused expressions, they collaborate to ensure precise planning and execution. Their teamwork and attention to detail reflect the commitment to delivering a flawless construction project.",
+        "action":"View Project Details"
+
+    },
+    {
+        "id":"1",
+        "heading" :"Plan the Perfect Build",
+        "image" : "../src/assets/constrction-2.jpg",
+        "description" : "Dive into the details with a comprehensive map review, ensuring every step of the project aligns with precision. Collaborative efforts pave the way for construction excellence.",
+        "action":"View Project Details"
+
+    },
+    {
+        "id":"2",
+        "heading" :"Three Workers Collaborating on the Blueprint",
+        "image" : "../src/assets/constraction-3.jpg",
+        "description" : "Three construction workers gather around a blueprint, analyzing the details to ensure seamless execution of the project. Their teamwork, focus, and dedication highlight their commitment to delivering high-quality results with precision and efficiency.",
+        "action":"View Project Details"
+
+    }
+]
