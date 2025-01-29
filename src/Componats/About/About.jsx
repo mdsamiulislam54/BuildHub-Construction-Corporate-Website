@@ -3,10 +3,11 @@ import About_1 from "../../assets/about-1.jpg";
 import About_2 from "../../assets/about-2.jpg";
 import About_3 from "../../assets/about-3.jpg";
 import { FaCheckCircle } from "react-icons/fa";
+import OurClients from "../Ourclients/Ourclients";
 
 const About = () => {
   return (
-    <div className="md:py-24 py-12 max-md:px-4">
+    <div className="md:py-14 py-12 max-md:px-4">
       <div className=" lg:max-w-7xl max-w-4xl mx-auto ">
         <div className="flex lg:items-start items-center gap-5 max-md:flex-col-reverse max-md:items-center  ">
           <div className="grid grid-cols-2 grid-rows-2 md:w-6/12 gap-5 ">
@@ -74,6 +75,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <OurClients/>
       </div>
     </div>
   );

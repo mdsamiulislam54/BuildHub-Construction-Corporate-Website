@@ -7,7 +7,9 @@ import {
   FaLinkedin,
   FaYoutube,
   FaDiscord,
+  
 } from "react-icons/fa";
+import { MdAccountBalance } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import Logo from "../../assets/letter-b.png";
@@ -184,7 +186,8 @@ const Navbar = () => {
           <div className="flex  items-center justify-between max-w-7xl mx-auto max-md:hidden ">
             <div className="flex items-center justify-center">
               <Link to={"/"}>
-                <img className="w-14" src={Logo} alt="" />
+                {/* <img className="w-14" src={Logo} alt="" /> */}
+                <MdAccountBalance size={35} color="red"/>
               </Link>
               <span className="text-2xl font-bold">BuildHub</span>
             </div>
@@ -200,7 +203,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"/about"}
                     className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
                   >
                     About

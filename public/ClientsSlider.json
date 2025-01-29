@@ -1,0 +1,34 @@
+[
+    {
+        "id":"0",
+        "images":"../src/assets/clients-1.png"
+    },
+    {
+        "id":"1",
+        "images":"../src/assets/clients-2.png"
+    },
+    {
+        "id":"2",
+        "images":"../src/assets/clients-3.png"
+    },
+    {
+        "id":"3",
+        "images":"../src/assets/clients-4.png"
+    },
+    {
+        "id":"4",
+        "images":"../src/assets/clients-5.png"
+    },
+    {
+        "id":"5",
+        "images":"../src/assets/clients-6.png"
+    },
+    {
+        "id":"6",
+        "images":"../src/assets/clients-7.png"
+    },
+    {
+        "id":"7",
+        "images":"../src/assets/clients-8.png"
+    }
+]
