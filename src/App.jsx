@@ -4,6 +4,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './Componats/Navbar/Navbar';
 import Banner from './Banner/Banner';
+import About from './Componats/About/About';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
              <>
                <Navbar/>
                <Banner/>
+               <About/>
+              
              </>
 
             } />

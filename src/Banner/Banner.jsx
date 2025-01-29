@@ -46,8 +46,8 @@ const Banner = () => {
   };
 
   return (
-    <div>
-      <div className="relative">
+    <div className="max-w-7xl mx-auto   ">
+      <div className="relative  z-10 ">
         {images.length > currentIndex ? (
           <div className="relative -z-1">
             <img
@@ -69,7 +69,7 @@ const Banner = () => {
                      
                       "
             >
-              <h2 className="text-5xl text-white font-bold sm:leading-20 leading-12 gap-x-10 z-10 sm:mb-6 max-sm:text-3xl">
+              <h2 className="text-5xl text-white font-bold sm:leading-20 leading-12 gap-x-10 z-10 sm:mb-6 max-md:text-3xl">
                 {images[currentIndex].heading}
               </h2>
               <p className=" text-base text-gray-300 leading-8 mb-6 font-medium text-center">
@@ -110,7 +110,7 @@ const Banner = () => {
           ))}
         </div>
       </div>
-     
+   
     </div>
   );
 };
