@@ -22,7 +22,7 @@ function App() {
                <Navbar/>
                <Banner/>
                <About/>
-               <Ourclients/>
+              
                
               
              </>

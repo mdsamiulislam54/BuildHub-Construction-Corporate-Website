@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`max-md:px-4 sticky top-0 left-0 right-0 z-50 shadow-lg transition-transform duration-500 ${
+        className={`max-md:px-4 sticky top-0 left-0 right-0 z-50  transition-transform duration-500 ${
           scrollposition === 0 ? " bg-white " : "bg-white"
         }
         }`}
