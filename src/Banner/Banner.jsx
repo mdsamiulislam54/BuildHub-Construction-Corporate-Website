@@ -46,7 +46,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto   ">
+    <div className="lg:max-w-7xl max-w-4xl mx-auto   ">
       <div className="relative  z-10 ">
         {images.length > currentIndex ? (
           <div className="relative -z-1">

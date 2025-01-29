@@ -49,7 +49,7 @@ const Navbar = () => {
         }
         }`}
       >
-        <nav className="z-50 max-w-7xl mx-auto">
+        <nav className="z-50 lg:max-w-7xl max-w-4xl mx-auto">
           {/* Mobile Menu Icon */}
           <div className="flex justify-between items-center  md:hidden">
             <span className={`text-xl font-bold flex items-center `}>
