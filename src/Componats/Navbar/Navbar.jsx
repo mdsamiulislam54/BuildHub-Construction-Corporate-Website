@@ -15,6 +15,7 @@ import { MdEmail } from "react-icons/md";
 import Logo from "../../assets/letter-b.png";
 
 import { FiMenu, FiX } from "react-icons/fi";
+import './Nav.css'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,14 +47,14 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`max-md:px-4 sticky top-0 left-0 right-0 z-50  transition-transform duration-500 ${
-          scrollposition === 0 ? " bg-white " : "bg-white"
+        className={`max-md:px-4  right-0 z-50  transition-transform duration-500 fixed top-0 left-0 bg-transparent  ${
+          scrollposition === 0 ? "bg-transparent " : "bg-white shadow-lg  "
         }
         }`}
       >
-        <nav className="z-50 lg:max-w-7xl max-w-4xl mx-auto">
+        <nav className="z-50 lg:max-w-7xl max-w-4xl mx-auto relative md:bg-transparent  ">
           {/* Mobile Menu Icon */}
-          <div className="flex justify-between items-center  md:hidden">
+          <div className="flex justify-between items-center   md:hidden">
             <span className={`text-xl font-bold flex items-center `}>
               <img className="w-12" src={Logo} alt="" />
               <span className={""}> BuildHub</span>
@@ -143,15 +144,17 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           {/* top bar */}
-          <div className=" flex justify-between items-center py-3 max-md:hidden bg-yellow-300 px-1">
+          <div className={`flex justify-between items-center py-2  max-md:hidden bg-transparent px-1 transition-all duration-300 ${
+            scrollposition> 0 ? 'absolute -top-20':'opacity-100'
+          }`}>
             <div className="flex items-center justify-center gap-3">
               <div className="flex items-center gap-2">
                 <FaPhone />
-                <span className="text-base">+123-456-7890</span>
+                <span className="text-base text-[var(--secondary)]">+123-456-7890</span>
               </div>
               <div className="flex items-center gap-2">
-                <MdEmail />
-                <span className="text-base">info@company.com</span>
+                <MdEmail color="var(--secondary)" />
+                <span className="text-base text-[var(--secondary)]">info@company.com</span>
               </div>
             </div>
             <div className="flex">
@@ -196,7 +199,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     Home
                   </Link>
@@ -204,7 +207,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/about"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     About
                   </Link>
@@ -212,7 +215,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     Services
                   </Link>
@@ -221,7 +224,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     Blog
                   </Link>
@@ -229,7 +232,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     News
                   </Link>
@@ -237,7 +240,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     Blog
                   </Link>
@@ -245,7 +248,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to={"/"}
-                    className="text-base text-gray-800 font-medium hover:text-yellow-200 transition-all duration-200"
+                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
                   >
                     Services
                   </Link>
@@ -253,7 +256,7 @@ const Navbar = () => {
               </ul>
 
               <div>
-                <button className="bg-yellow-300 text-2xl px-6 py-1 rounded-lg max-sm:hidden hover:shadow-lg font-bold cursor-pointer">
+                <button className="bg-[var(--primary)] text-2xl px-6 py-1 rounded-lg max-sm:hidden hover:shadow-lg font-bold cursor-pointer">
                   Qoute
                 </button>
               </div>

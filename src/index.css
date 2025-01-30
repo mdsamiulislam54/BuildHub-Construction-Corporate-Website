@@ -2,5 +2,10 @@
 @import "tailwindcss";
 
 @theme{
-    --cont: 10rem;
+    --primary:#f5cd05;
+    --secondary:#0a0a0a ;
+    --bb:#ffffff;
+
+    
+
 }

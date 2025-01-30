@@ -7,6 +7,7 @@ import Banner from './Componats/Banner/Banner';
 import About from './Componats/About/About';
 import Aboutpage from './Componats/About/About_Page/Aboutpage';
 import Ourclients from './Componats/Ourclients/Ourclients';
+import ServicesSection from './Componats/ServicesSection/ServicesSection';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                <Navbar/>
                <Banner/>
                <About/>
+               <ServicesSection/>
               
                
               

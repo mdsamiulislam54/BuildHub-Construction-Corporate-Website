@@ -46,12 +46,12 @@ const Banner = () => {
   };
 
   return (
-    <div className="lg:max-w-7xl max-w-4xl mx-auto   ">
+    <div className="lg:max-w-full max-w-4xl mx-auto   ">
       <div className="relative  z-10 ">
         {images.length > currentIndex ? (
           <div className="relative -z-1">
             <img
-              className="w-full h-[555px] object-cover  "
+              className="w-full md:h-[100vh] object-cover  "
               src={images[currentIndex].image}
               alt={images.heading}
             />
@@ -76,7 +76,7 @@ const Banner = () => {
                 {images[currentIndex].description}
               </p>
               <button
-                className="relative z-10 border-2 border-yellow-300 px-5 py-3 text-xl font-medium rounded-md cursor-pointer text-white overflow-hidden
+                className="relative z-10 border-2 border-[var(--primary)] px-5 py-3 text-xl font-medium rounded-md cursor-pointer text-white overflow-hidden
              before:absolute before:bg-amber-300 before:top-0 before:left-[-100%] before:w-full before:h-full before:transition-transform before:duration-300 before:transform hover:before:translate-x-full before:-z-1 hover:text-black "
               >
                 {images[currentIndex].action}
@@ -87,12 +87,12 @@ const Banner = () => {
 
         <div className="absolute top-[50%] left-0 right-0 flex justify-between transform -translate-y-1/2">
           <button className="p-3 hover:cursor-pointer" onClick={prevBtn}>
-            {" "}
-            <FaChevronCircleLeft size={30} color="gold" />{" "}
+           
+            <FaChevronCircleLeft size={30} color="var(--primary)" /> 
           </button>
           <button className="p-3 hover:cursor-pointer" onClick={nextBtn}>
-            {" "}
-            <FaChevronCircleRight size={30} color="gold" />
+           
+            <FaChevronCircleRight size={30} color="var(--primary)" />
           </button>
         </div>
 
@@ -102,9 +102,9 @@ const Banner = () => {
               key={index}
               className={`w-3 h-3 rounded-full ${
                 index === currentIndex
-                  ? "bg-yellow-300 text-white"
+                  ? "bg-[var(--primary)] text-white"
                   : "bg-gray-500 text-white"
-              } hover:bg-amber-200 cursor-pointer`}
+              } hover:bg-[var(--primary)] cursor-pointer`}
               onClick={() => handleDotClick(index)}
             ></button>
           ))}
