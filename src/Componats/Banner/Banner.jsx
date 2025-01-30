@@ -51,7 +51,7 @@ const Banner = () => {
         {images.length > currentIndex ? (
           <div className="relative -z-1">
             <img
-              className="w-full md:h-[100vh] object-cover  "
+              className="w-full h-[100vh] object-cover  "
               src={images[currentIndex].image}
               alt={images.heading}
             />

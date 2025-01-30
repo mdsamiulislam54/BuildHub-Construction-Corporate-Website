@@ -1,270 +1,73 @@
-import React, { useEffect, useState } from "react";
-
-import {
-  FaPhone,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaYoutube,
-  FaDiscord,
-  
-} from "react-icons/fa";
-import { MdAccountBalance } from "react-icons/md";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { MdEmail } from "react-icons/md";
-import Logo from "../../assets/letter-b.png";
-
 import { FiMenu, FiX } from "react-icons/fi";
-import './Nav.css'
+import { MdAccountBalance } from "react-icons/md";
+import MobileMenu from "./MobileMenu"; // Importing Mobile Menu Component
+import "./Nav.css";
 
-const Navbar = () => {
+const Navbar = ({bgColor}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollposition, setScrollposition] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollPositionHandle = () => {
-    const position = window.scrollY;
-    if (scrollposition === 0) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-    setScrollposition(position);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", scrollPositionHandle);
-
-    return () => {
-      window.removeEventListener("scroll", scrollPositionHandle);
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
     };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
-      <div
-        className={`max-md:px-4  right-0 z-50  transition-transform duration-500 fixed top-0 left-0 bg-transparent  ${
-          scrollposition === 0 ? "bg-transparent " : "bg-white shadow-lg  "
-        }
-        }`}
-      >
-        <nav className="z-50 lg:max-w-7xl max-w-4xl mx-auto relative md:bg-transparent  ">
-          {/* Mobile Menu Icon */}
-          <div className="flex justify-between items-center   md:hidden">
-            <span className={`text-xl font-bold flex items-center `}>
-              <img className="w-12" src={Logo} alt="" />
-              <span className={""}> BuildHub</span>
-            </span>
-            <button onClick={toggleMenu}>
-              {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-            </button>
-          </div>
-          {/* mobill list item */}
-          <div
-            className={`fixed top-0 right-0 h-full w-full  p-8 z-50 transition-transform duration-300 ease-in-out bg-black  ${
-              isMenuOpen ? "translate-x-20" : "translate-x-full"
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrollPosition > 0 ? "bg-white shadow-md" : bgColor || "bg-transparent"
+      }`}
+    >
+     <div className="md:w-7xl mx-auto">
+     <div className="container mx-auto flex justify-between items-center p-4">
+        <div className="flex items-center">
+          <Link to="/">
+            <MdAccountBalance
+              size={30}
+              color={scrollPosition > 0 ? "black" : "gold"}
+            />
+          </Link>
+          <span
+            className={`ml-2 text-xl font-bold ${
+              scrollPosition > 0 ? "text-black" : "text-white"
             }`}
           >
-            <ul className="flex gap-4 flex-col justify-center items-center ">
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold  "
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold"
-                >
-                  About
-                </Link>
-              </li>
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold"
-                >
-                  Services
-                </Link>
-              </li>
+            BuildHub
+          </span>
+        </div>
 
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold"
-                >
-                  News
-                </Link>
-              </li>
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className="mb-5">
-                <Link
-                  to={"/"}
-                  className="text-2xl  text-white font-bold"
-                >
-                  Services
-                </Link>
-              </li>
-              <button className="relative z-10 border-2 border-yellow-300 px-32 py-3 text-xl font-medium rounded-md cursor-pointer text-white overflow-hidden
-             before:absolute before:bg-amber-300 before:top-0 before:left-[-100%] before:w-full before:h-full before:transition-transform before:duration-300 before:transform hover:before:translate-x-full before:-z-1 hover:text-black ">
-                Qoute
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6 items-center">
+        <li><Link to="/" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Home</Link></li>
+            <li><Link to="/about" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>About</Link></li>
+            <li><Link to="/services" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Services</Link></li>
+           <button
+                className={`relative z-10 border-2 border-[var(--primary)] px-8 py-1 text-xl font-medium rounded-md cursor-pointer  overflow-hidden before:absolute before:bg-amber-300 before:top-0 before:left-[-100%] before:w-full before:h-full before:transition-transform before:duration-300 before:transform hover:before:translate-x-full before:-z-1 hover:text-black
+                  ${scrollPosition > 0 ? "text-black" : "text-white"} `}
+              >
+               Quote
               </button>
-            </ul>
+        </ul>
 
-            {/* Close Button */}
-            <button className="absolute top-5 left-5" onClick={toggleMenu}>
-              <FiX size={50} color="gold" />
-            </button>
-          </div>
-           {/* mobill list item end*/}
-
-          {/* Mobile Menu Icon END */}
-
-          {/* Desktop Menu */}
-          {/* top bar */}
-          <div className={`flex justify-between items-center py-2  max-md:hidden bg-transparent px-1 transition-all duration-300 ${
-            scrollposition> 0 ? 'absolute -top-20':'opacity-100'
-          }`}>
-            <div className="flex items-center justify-center gap-3">
-              <div className="flex items-center gap-2">
-                <FaPhone />
-                <span className="text-base text-[var(--secondary)]">+123-456-7890</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MdEmail color="var(--secondary)" />
-                <span className="text-base text-[var(--secondary)]">info@company.com</span>
-              </div>
-            </div>
-            <div className="flex">
-              <FaFacebook
-                size={20}
-                style={{ margin: "10px" }}
-                className="hover:scale-110 cursor-pointer transition-all duration-200"
-              />
-              <FaTwitter
-                size={20}
-                style={{ margin: "10px" }}
-                className="hover:scale-110 cursor-pointer transition-all duration-200"
-              />
-              <FaLinkedin
-                size={20}
-                style={{ margin: "10px" }}
-                className="hover:scale-110 cursor-pointer transition-all duration-200"
-              />
-              <FaYoutube
-                size={20}
-                style={{ margin: "10px" }}
-                className="hover:scale-110 cursor-pointer transition-all duration-200"
-              />
-              <FaDiscord
-                size={20}
-                style={{ margin: "10px" }}
-                className="hover:scale-110 cursor-pointer transition-all duration-200"
-              />
-            </div>
-          </div>
-          {/* navbar  */}
-          <div className="flex  items-center justify-between max-w-7xl mx-auto max-md:hidden ">
-            <div className="flex items-center justify-center">
-              <Link to={"/"}>
-                {/* <img className="w-14" src={Logo} alt="" /> */}
-                <MdAccountBalance size={35} color="red"/>
-              </Link>
-              <span className="text-2xl font-bold">BuildHub</span>
-            </div>
-            <div className="flex gap-10 items-center py-5 ">
-              <ul className="flex gap-4 align-center max-sm:hidden ">
-                <li>
-                  <Link
-                    to={"/"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/about"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    Services
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to={"/"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    News
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/"}
-                    className="text-base text-[var(--secondary)] font-medium  transition-all duration-200"
-                  >
-                    Services
-                  </Link>
-                </li>
-              </ul>
-
-              <div>
-                <button className="bg-[var(--primary)] text-2xl px-6 py-1 rounded-lg max-sm:hidden hover:shadow-lg font-bold cursor-pointer">
-                  Qoute
-                </button>
-              </div>
-            </div>
-          </div>
-        </nav>
+        {/* Mobile Menu Button */}
+        <button className="md:hidden" onClick={toggleMenu}>
+          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+        </button>
       </div>
-    </>
+
+      {/* Mobile Menu Component */}
+      <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+     </div>
+    </nav>
   );
 };
 
