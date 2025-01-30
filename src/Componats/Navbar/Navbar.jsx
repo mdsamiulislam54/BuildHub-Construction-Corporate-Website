@@ -47,9 +47,12 @@ const Navbar = ({bgColor}) => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 items-center">
-        <li><Link to="/" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Home</Link></li>
+            <li><Link to="/" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Home</Link></li>
             <li><Link to="/about" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>About</Link></li>
             <li><Link to="/services" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Services</Link></li>
+            <li><Link to="/blog" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Blog</Link></li>
+            <li><Link to="/contract" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>Contract</Link></li>
+            <li><Link to="/news" className={`text-base font-medium ${scrollPosition > 0 ? "text-black" : "text-white"}`}>News</Link></li>
            <button
                 className={`relative z-10 border-2 border-[var(--primary)] px-8 py-1 text-xl font-medium rounded-md cursor-pointer  overflow-hidden before:absolute before:bg-amber-300 before:top-0 before:left-[-100%] before:w-full before:h-full before:transition-transform before:duration-300 before:transform hover:before:translate-x-full before:-z-1 hover:text-black
                   ${scrollPosition > 0 ? "text-black" : "text-white"} `}

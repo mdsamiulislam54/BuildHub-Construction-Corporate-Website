@@ -9,6 +9,7 @@ import Aboutpage from './Componats/Pages/Aboutpage';
 import Ourclients from './Componats/Ourclients/Ourclients';
 import ServicesSection from './Componats/ServicesSection/ServicesSection';
 import Services from './Componats/Pages/Services';
+import Blog from './Componats/Blog/Blog';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                <Banner/>
                <About/>
                <ServicesSection/>
+               <Blog/>
               
                
               

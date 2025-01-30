@@ -72,7 +72,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-14 ">
+    <section className="md:py-14 ">
       <div className="max-w-7xl mx-auto px-4 text-center relative ">
         <h2 className="text-4xl font-bold text-[var(--secondary)] mb-6">
           Our Services
@@ -89,7 +89,7 @@ const ServicesSection = () => {
             }`}
           >
             {/* First 4 Cards */}
-            <div className="grid grid-cols-4 gap-6 w-full flex-shrink-0 ">
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 w-full flex-shrink-0 ">
               {services.slice(0, 4).map((service) => (
                 <div
                   key={service.id}
@@ -114,7 +114,7 @@ const ServicesSection = () => {
             </div>
 
             {/* Second 4 Cards */}
-            <div className="grid grid-cols-4 gap-6 w-full flex-shrink-0">
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1  gap-6 w-full flex-shrink-0">
               {services.slice(4, 8).map((service) => (
                 <div
                   key={service.id}
@@ -138,7 +138,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Left & Right Arrow Buttons */}
-        <div className="absolute top-0 right-0 flex gap-2 mt-3">
+        <div className="absolute top-0 right-0 flex gap-2 mt-3 md:block hidden">
           <button
             onClick={prevSlide}
             className="p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition"

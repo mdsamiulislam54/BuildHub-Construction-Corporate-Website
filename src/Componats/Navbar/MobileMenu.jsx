@@ -14,13 +14,11 @@ const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
         <FiX size={50} color="gold" />
       </button>
       <ul className="flex flex-col items-center gap-6 mt-16">
-        {["Home", "About", "Services", "Blog", "News"].map((item) => (
-          <li key={item}>
-            <Link to="/" className="text-2xl text-white font-bold">
-              {item}
-            </Link>
-          </li>
-        ))}
+      <li><Link to="/" className={`text-base font-medium text-white `}>Home</Link></li>
+      <li><Link to="/about" className={`text-base font-medium text-white `}>About</Link></li>
+      <li><Link to="/services" className={`text-base font-medium text-white `}>Services</Link></li>
+      <li><Link to="/blog" className={`text-base font-medium text-white `}>Blog</Link></li>
+      <li><Link to="/contract" className={`text-base font-medium text-white `}>Contract</Link></li>
       </ul>
     </div>
   );

@@ -22,10 +22,10 @@ const OurClients = () => {
 
 
   return (
-    <div className="md:py-14 py-2">
+    <div className="md:py-14 pt-10">
       <div className="overflow-hidden">
        
-        <div className=" grid grid-cols-8 animate-marquee ">
+        <div className=" grid md:grid-cols-8 grid-cols-4 animate-marquee ">
           {
             clients.length > 0 &&  clients.map((img,ind)=>{
                 return(
