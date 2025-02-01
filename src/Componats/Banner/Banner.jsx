@@ -37,9 +37,7 @@ const Banner = () => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
-  if (!images.length) {
-    return <div>Loading...</div>;
-  }
+
 
   const handleDotClick = (index) => {
     setCurrnetIndex(index);
