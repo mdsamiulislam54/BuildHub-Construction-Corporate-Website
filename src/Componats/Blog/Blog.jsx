@@ -70,17 +70,17 @@ const Blog = ({pagesize=2,  hideButtons = false, hiddendBtn = false}) => {
               : item.paragraph.split(" ").slice(0, 40).join(" ") + "..."; 
 
             return (
-              <div key={index} className="blog-card p-4 shadow-lg">
+              <div key={index} className="blog-card p-4 shadow-lg relative overflow-hidden">
                 <img src={item.images} alt={item.title} className="rounded-lg" />
                 <div className="flex items-center justify-between my-6">
                     <h5 className="text-2xl font-bold">{item.admin}</h5>
-                    <data value="">{item.date}</data>
+                    <date className='font-bold'  value={item.date}>{item.date}</date>
                 </div>
-                <h2>{item.title}</h2>
-                <p>{displayText}</p>
+                <h2 className="text-3xl font-bold mb-6 tracking-wide">{item.title}</h2>
+                <p className="text-base font-light tracking-wide leading-8">{displayText}</p>
                 <button
                   onClick={() => toggleReadMore(index)}
-                  className="text-blue-500"
+                  className="text-blue-500 relative py-2"
                 >
                   {item.isReadMore ? "Read Less" : "Read More"}
                 </button>
