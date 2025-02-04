@@ -33,7 +33,7 @@ console.log(sliceImages);
                 <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Project</h1>
             </div>
             <div className='mb-6  py-4'>
-                <ul className=' flex justify-center items-center gap-10'>
+                <ul className=' flex flex-wrap justify-center items-center gap-5 '>
                     <li><button onClick={()=> setImages(GalleryData)} className='relative z-10 border-2 border-[var(--primary)] px-6 py-2 text-xl font-medium rounded-md cursor-pointer  overflow-hidden
              before:absolute before:bg-amber-300 before:top-0 before:left-[-100%] before:w-full before:h-full before:transition-transform before:duration-300 before:transform hover:before:translate-x-full before:-z-1 hover:text-black'>Show All</button></li>
                     {
@@ -42,7 +42,7 @@ console.log(sliceImages);
                     }
                 </ul>
             </div>
-            <div className='grid md:grid-cols-3 gap-5'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-5 justify-center'>
                 {
                     sliceImages.map((image, index) => <div key={index} className=' '>
 
