@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {GalleryData} from '/public/FilterGalleryData'
 import {Link} from 'react-router-dom'
 
-const FilterGallery = ({show = 6}) => {
+const FilterGallery = ({show = 6, }) => {
     const [Images , setImages]= useState([])
     const [Filter , setFilter]= useState([])
 
@@ -30,7 +30,7 @@ console.log(sliceImages);
     <div className='md:py-14 py-12'>
         <div className="md:w-7xl  px-4 md:px-0 mx-auto">
             <div>
-                <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Project</h1>
+                <h1 className="text-4xl font-bold text-gray-900 mb-6 ">Our Project</h1>
             </div>
             <div className='mb-6  py-4'>
                 <ul className=' flex flex-wrap justify-center items-center gap-5 '>
@@ -52,7 +52,7 @@ console.log(sliceImages);
             </div>
 
             <div className='flex justify-center my-4'>
-                <Link to={'/project'} className='relative z-10 border-2 border-[var(--primary)] px-6 py-2 text-xl font-medium rounded-md cursor-pointer  overflow-hidden
+                <Link to={'/projects'} className='relative z-10 border-2 border-[var(--primary)] px-6 py-2 text-xl font-medium rounded-md cursor-pointer  overflow-hidden
                         before:absolute before:bg-amber-300 before:top-0 before:left-[-100%] before:w-full before:h-full before:transition-transform before:duration-300 before:transform hover:before:translate-x-full before:-z-1 hover:text-black'>See More</Link>
             </div>
           

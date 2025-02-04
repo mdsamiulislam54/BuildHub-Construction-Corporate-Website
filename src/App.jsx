@@ -15,6 +15,7 @@ import Blog from './Componats/Blog/Blog';
 import Blogpage from './Componats/Pages/BlogPage';
 import MouseMoveEffect from './Componats/MouseMoveEffect/MouseMoveEffect';
 import FilterGallery from './Componats/FillterGallery/FilterGallery';
+import Project from './Componats/Pages/Project';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/ourclients" element={<Ourclients />} />
             <Route path='/blog' element={<Blogpage/>}/>
+            <Route path="/projects" element={<Project/>} />
           </Routes>
         )}
       </div>
