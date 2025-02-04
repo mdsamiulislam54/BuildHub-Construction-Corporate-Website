@@ -16,6 +16,7 @@ import Blogpage from './Componats/Pages/BlogPage';
 import MouseMoveEffect from './Componats/MouseMoveEffect/MouseMoveEffect';
 import FilterGallery from './Componats/FillterGallery/FilterGallery';
 import Project from './Componats/Pages/Project';
+import Contact from './Componats/Contact/Contact';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
                   <WhaWeDo />
                   <Blog/>
                   <FilterGallery/>
+                  <Contact/>
                   
                   
                 </>
