@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 const Contact = () => {
   return (
     <section className="bg-gray-100 py-12">
-      <div className="md:w-7xl mx-auto text-center">
+      <div className="md:w-7xl mx-auto text-center md:px-0 px-4">
         <h2 className="text-3xl font-bold text-gray-800">Get in Touch</h2>
         <p className="text-gray-600 mt-2">We'd love to hear from you!</p>
 
@@ -33,12 +33,15 @@ const Contact = () => {
 
         {/* Contact Form */}
         <form className="mt-8 bg-white p-6 rounded-md shadow-md">
-          <input type="text" placeholder="Your Name" className="w-full p-2 border-l-2 border-r-2 rounded-md mb-4" />
-          <input type="email" placeholder="Your Email" className="w-full p-2 border-l-2 border-r-2 rounded-md mb-4" />
-          <input type="tel" placeholder="Your Phone Number" className="w-full p-2 border-l-2 border-r-2 rounded-md mb-4" />
+          <div className="md:flex gap-5">
+          <input type="text" placeholder="Your Name" className="w-full p-2 border-l-2 border-r-2 bg-yellow-100 outline-none rounded-md mb-4" />
+          <input type="email" placeholder="Your Email" className="w-full p-2 border-l-2 border-r-2 bg-yellow-100 outline-none rounded-md mb-4" />
+          <input type="tel" placeholder="Your Phone Number" className="w-full p-2 border-l-2 border-r-2 bg-yellow-100 outline-none rounded-md mb-4" />
+          </div>
+         
 
           {/* Subject Dropdown */}
-          <select className="w-full p-2 border-l-2 border-r-2 rounded-md mb-4">
+          <select className="w-full p-2 border-l-2 border-r-2 bg-yellow-100 outline-none rounded-md mb-4">
             <option>General Inquiry</option>
             <option>Project Estimate</option>
             <option>Partnership</option>
@@ -47,10 +50,10 @@ const Contact = () => {
           </select>
 
           {/* File Upload */}
-          <input type="file" className="w-full p-2 border-l-2 border-r-2 rounded-md mb-4" />
+          <input type="file" className="w-full p-2 border-l-2 border-r-2 bg-yellow-100 outline-none rounded-md mb-4" />
 
           {/* Message Field */}
-          <textarea placeholder="Your Message" className="w-full p-2 border-l-2 border-r-2 rounded-md mb-4 h-32"></textarea>
+          <textarea placeholder="Your Message" className="w-full p-2 border-l-2 border-r-2 bg-yellow-100 outline-none rounded-md mb-4 h-32"></textarea>
 
           <button className="bg-yellow-300 text-black py-2 px-4 rounded-md hover:bg-yellow-200 cursor-progress transition">
             Send Message

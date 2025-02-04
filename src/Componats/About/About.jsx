@@ -11,13 +11,13 @@ const About = () => {
       <div className=" lg:max-w-7xl max-w-4xl mx-auto ">
         <div className="flex lg:items-start items-center gap-5 max-md:flex-col-reverse max-md:items-center  ">
           <div className="grid grid-cols-2 grid-rows-2 md:w-6/12 gap-5 ">
-            <img
-              className="row-span-2 w-100 h-full object-cover rounded-lg shadow-lg"
+            <div className="row-span-2 overflow-hidden"><img
+              className=" w-100 h-full object-cover rounded-lg shadow-lg hover:scale-125 transition-all duration-300"
               src={About_1}
               alt=""
-            />
-            <img className="rounded-lg shadow-lg" src={About_2} alt="" />
-            <img className="rounded-lg shadow-lg" src={About_3} alt="" />
+            /></div>
+           <div className="overflow-hidden"> <img className="rounded-lg shadow-lg hover:scale-125 transition-all duration-300" src={About_2} alt="" /></div>
+            <div className="overflow-hidden"><img className="rounded-lg shadow-lg hover:scale-125 transition-all duration-300" src={About_3} alt="" /></div>
           </div>
           <div className="w-6/12 max-md:w-full max-sm:text-center max-md:w-ful max-md:text-center">
             <h6 className="text-base font-medium pb-5">About us.....</h6>

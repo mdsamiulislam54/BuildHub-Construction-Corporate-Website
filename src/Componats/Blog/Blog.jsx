@@ -71,7 +71,7 @@ const Blog = ({pagesize=2,  hideButtons = false, hiddendBtn = false}) => {
 
             return (
               <div key={index} className="blog-card p-4 shadow-lg relative overflow-hidden">
-                <img src={item.images} alt={item.title} className="rounded-lg" />
+                <div className="overflow-hidden"><img src={item.images} alt={item.title} className="rounded-lg hover:scale-125 transition-all duration-200" /></div>
                 <div className="flex items-center justify-between my-6">
                     <h5 className="md:text-2xl font-bold">{item.admin}</h5>
                     <date className='font-bold text-gray-600'  value={item.date}>{item.date}</date>

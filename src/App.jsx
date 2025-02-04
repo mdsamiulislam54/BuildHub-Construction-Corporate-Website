@@ -17,6 +17,7 @@ import MouseMoveEffect from './Componats/MouseMoveEffect/MouseMoveEffect';
 import FilterGallery from './Componats/FillterGallery/FilterGallery';
 import Project from './Componats/Pages/Project';
 import Contact from './Componats/Contact/Contact';
+import { Footer } from './Componats/Footer/Footer';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
                   <Blog/>
                   <FilterGallery/>
                   <Contact/>
+                  <Footer/>
                   
                   
                 </>

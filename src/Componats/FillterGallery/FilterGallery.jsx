@@ -42,11 +42,11 @@ console.log(sliceImages);
                     }
                 </ul>
             </div>
-            <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-5 justify-center'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-5 justify-center overflow-hidden'>
                 {
-                    sliceImages.map((image, index) => <div key={index} className=' '>
+                    sliceImages.map((image, index) => <div key={index} className='overflow-hidden '>
 
-                        <img src={image.images} alt="" className=' w-100 h-100 object-cover rounded-lg' />
+                        <img src={image.images} alt="" className=' w-100 h-100 object-cover rounded-lg hover:scale-125 transition-all duration-200 ' />
                     </div> )
                 }
             </div>
