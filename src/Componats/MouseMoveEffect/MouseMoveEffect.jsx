@@ -17,7 +17,7 @@ const MouseMoveEffect = () => {
 
   return (
     <>
-     <div
+     <div className=''
       style={{
         position: 'fixed', // Fix position relative to viewport
         left: `${positionX - 20}px`, // Adjust to center the effect

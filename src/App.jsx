@@ -14,6 +14,7 @@ import WhaWeDo from './Componats/WhatWeDo/WhatWeDo';
 import Blog from './Componats/Blog/Blog';
 import Blogpage from './Componats/Pages/BlogPage';
 import MouseMoveEffect from './Componats/MouseMoveEffect/MouseMoveEffect';
+import FilterGallery from './Componats/FillterGallery/FilterGallery';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
                   <ServicesSection />
                   <WhaWeDo />
                   <Blog/>
+                  <FilterGallery/>
                   
                   
                 </>

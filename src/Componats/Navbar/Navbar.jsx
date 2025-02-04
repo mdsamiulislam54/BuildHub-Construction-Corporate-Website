@@ -63,7 +63,7 @@ const Navbar = ({bgColor}) => {
 
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={toggleMenu}>
-          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          {isMenuOpen ? <FiX size={24}  /> : <FiMenu size={24} />}
         </button>
       </div>
 

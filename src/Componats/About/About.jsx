@@ -24,7 +24,7 @@ const About = () => {
             <h2 className="sm:text-3xl md:text-4xl font-bold pb-5">
               Building Dreams, Crafting Reality
             </h2>
-            <p className="text-base text-gray-600 leading-relaxed mb-5 ">
+            <p className="text-base text-gray-600 leading-8 tracking-wide mb-5 ">
               At BuildHub, we believe that every structure tells a story. With
               years of experience in the construction industry, we specialize in
               delivering high-quality, durable, and innovative solutions for

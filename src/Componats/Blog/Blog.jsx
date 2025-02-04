@@ -61,9 +61,9 @@ const Blog = ({pagesize=2,  hideButtons = false, hiddendBtn = false}) => {
 
   return (
     <div className="md:py-14 py-12 max-md:px-4">
-      <div className="lg:max-w-7xl max-w-4xl mx-auto">
+      <div className="lg:max-w-7xl max-w-4xl mx-auto px-4 md:px-0">
         <div><h4 className="text-center mb-12 text-4xl font-bold tracking-wide leading-10">Our Blog</h4></div>
-        <div className="grid grid-cols-2 gap-6 ">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
           {currentBlogs.map((item, index) => {
             const displayText = item.isReadMore
               ? item.paragraph
@@ -73,10 +73,10 @@ const Blog = ({pagesize=2,  hideButtons = false, hiddendBtn = false}) => {
               <div key={index} className="blog-card p-4 shadow-lg relative overflow-hidden">
                 <img src={item.images} alt={item.title} className="rounded-lg" />
                 <div className="flex items-center justify-between my-6">
-                    <h5 className="text-2xl font-bold">{item.admin}</h5>
-                    <date className='font-bold'  value={item.date}>{item.date}</date>
+                    <h5 className="md:text-2xl font-bold">{item.admin}</h5>
+                    <date className='font-bold text-gray-600'  value={item.date}>{item.date}</date>
                 </div>
-                <h2 className="text-3xl font-bold mb-6 tracking-wide">{item.title}</h2>
+                <h2 className="md:text-3xl text-xl font-bold mb-6 tracking-wide">{item.title}</h2>
                 <p className="text-base font-light tracking-wide leading-8">{displayText}</p>
                 <button
                   onClick={() => toggleReadMore(index)}
@@ -96,12 +96,12 @@ const Blog = ({pagesize=2,  hideButtons = false, hiddendBtn = false}) => {
               
               <FaArrowLeft color="gold" />
             </button>
-            <button onClick={()=> handleNext1(1)}    className="py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">1</button>
-            <button onClick={()=> handleNext2(2)}  className="py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">2</button>
+            <button onClick={()=> handleNext1(1)}    className=" md:block hidden py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">1</button>
+            <button onClick={()=> handleNext2(2)}  className=" md:block hidden py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">2</button>
           {!hiddendBtn && (
              <>
-              <button onClick={()=> handleNext3(3)}  className="py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">3</button>
-              <button onClick={()=> handleNext4(4)}  className="py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">4</button></>
+              <button onClick={()=> handleNext3(3)}  className=" md:block hidden py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">3</button>
+              <button onClick={()=> handleNext4(4)}  className=" md:block hidden py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all">4</button></>
           )}
           
             <button className="py-4 px-6 font-bold bg-gray-100 shadow-lg rounded-lg cursor-pointer hover:scale-110 duration-300 transition-all"
